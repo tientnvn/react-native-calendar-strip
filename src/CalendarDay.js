@@ -243,7 +243,7 @@ class CalendarDay extends Component {
               style={[{ fontSize: this.state.dateNameFontSize }, dateNameStyle]}
               allowFontScaling={this.props.allowDayTextScaling}
             >
-              {this.props.date}
+              {this.props.date.isSame(new Date(), "days") ? "Hôm nay": this.props.date.format("dddd").toUpperCase()}
             </Text>
           )}
           {this.props.showDayNumber && (
